@@ -9,7 +9,7 @@ phases:
       - apt-get -y install google-chrome-stable
       - add-apt-repository ppa:webupd8team/java -y
       - apt-get update
-      - aapt-get install oracle-java8-set-default
+      - apt-get install oracle-java8-set-default
       - java -version
   pre_build:
     commands:
