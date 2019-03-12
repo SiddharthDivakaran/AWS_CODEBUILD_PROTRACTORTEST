@@ -7,10 +7,8 @@ phases:
       - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
       - apt-get -y update
       - apt-get -y install google-chrome-stable
-      - sudo apt-add-repository ppa:webupd8team/java
-      - sudo apt-get update
-      - sudo apt-get install oracle-java8-installer
-      - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+      - sudo rm /var/lib/dpkg/info/oracle-java8-installer.postinst -f
+      - sudo dpkg --configure oracle-java8-installer
   pre_build:
     commands:
       - npm install
