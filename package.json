@@ -1,0 +1,19 @@
+{
+  "name": "AWS_CodeBuild_ProtractorTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall":"webdriver-manager update --gecko false",
+    "pretest":"webdriver-manager start --detach",
+    "test":"node ./node_modules/protractor/bin/protractor ./config/config.js"
+  },
+  "keywords": [],
+  "author": "Siddharth Divakaran",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.4.2",
+    "protractor-beautiful-reporter": "^1.2.7",
+    "protractor-jasmine2-html-reporter": "0.0.7"
+  }
+}
