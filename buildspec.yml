@@ -1,15 +1,5 @@
 version: 0.2
 phases:
-  install:
-    commands:
-      # Get Chrome Information
-      - curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-      - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-      - apt-get -y update
-      - apt-get -y install google-chrome-stable
-      - sudo rm /var/lib/dpkg/info/oracle-java8-installer.postinst -f
-      - sudo apt-get -f install
-      - sudo dpkg --configure oracle-java8-installer
   pre_build:
     commands:
       - npm install
@@ -20,4 +10,4 @@ phases:
       - npm run test     
   post_build:
     commands:
-      - echo Build completed    
+      - echo Build completed
