@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall":"webdriver-manager update --gecko false",
-    "pretest":"webdriver-manager start --detach",
+    "postinstall":"webdriver-manager update --versions.chrome 2.42 --gecko false",
+    "pretest":"webdriver-manager start --versions.chrome 2.42 --detach",
     "test":"node ./node_modules/protractor/bin/protractor ./config/config.js"
   },
   "keywords": [],
