@@ -8,6 +8,7 @@ phases:
       - apt-get -y update
       - apt-get -y install google-chrome-stable
       - sudo rm /var/lib/dpkg/info/oracle-java8-installer.postinst -f
+      - sudo apt-get -f install
       - sudo dpkg --configure oracle-java8-installer
   pre_build:
     commands:
